@@ -1,0 +1,42 @@
+*mkspell-when-stale.txt*	For Vim version ≥8.0.	Last change: 2024 Jun 05
+
+Simple Vim `mkspell` wrapper~
+
+MKSPELL-WHEN-STALE COMMANDS		*mkspell-when-stale*
+
+1. About				|mkspell-when-stale|
+2. Commands				|mkspell-when-stale-cmds|
+
+==============================================================================
+1. About This Plugin			*mkspell-when-stale*
+
+Simple Vim `mkspell` wrapper that runs on Vim startup and
+on demand.
+
+Project page: https://github.com/landonb/mkspell-when-stale
+
+==============================================================================
+2. Mkspell-When-Stale Commands		*mkspell-when-stale-cmds*
+
+				*g:mkspell_when_stale#MkspellWhenStale()*
+
+`g:mkspell_when_stale#MkspellWhenStale()` feeds each `~/.vim/spell/*.add`
+file to `mkspell` to generate `.spl` files that Vim uses to spell check.
+
+- In the most basic example, an English user has a single input
+  file, `~/.vim/spell/en.utf-8.add`
+
+  - After running the wrapper command, or after restarting Vim,
+    the wrapper command generates `~/.vim/spell/en.utf-8.add.spl`
+
+- This command finishes immediately if the `.spl` file is already
+  up to date (newer than the input file).
+
+This command runs on startup, and can also be called directly,
+or perhaps from a script after updating the input file, e.g.,
+>
+    vim_generate_spellfile () {
+      vim -c "call g:mkspell_when_stale#MkspellWhenStale()" -c q
+    }
+<
+ vim:tw=78:ts=8:ft=help:norl:
