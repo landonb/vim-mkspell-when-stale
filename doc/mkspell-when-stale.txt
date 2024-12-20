@@ -4,11 +4,11 @@ Simple Vim `mkspell` wrapper~
 
 MKSPELL-WHEN-STALE COMMANDS		*mkspell-when-stale*
 
-1. About				|mkspell-when-stale|
-2. Commands				|mkspell-when-stale-cmds|
+1. About				|mkspell-when-stale-about|
+2. Commands				|mkspell-when-stale-commands|
 
 ==============================================================================
-1. About This Plugin			*mkspell-when-stale*
+1. About This Plugin			*mkspell-when-stale-about*
 
 Simple Vim `mkspell` wrapper that runs on Vim startup and
 on demand.
@@ -16,7 +16,7 @@ on demand.
 Project page: https://github.com/landonb/mkspell-when-stale
 
 ==============================================================================
-2. Mkspell-When-Stale Commands		*mkspell-when-stale-cmds*
+2. Mkspell-When-Stale Commands		*mkspell-when-stale-commands*
 
 				*g:mkspell_when_stale#MkspellWhenStale()*
 
