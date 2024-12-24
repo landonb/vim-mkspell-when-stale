@@ -10,12 +10,12 @@
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if expand("%:p") ==# expand("<sfile>:p")
-  unlet g:loaded_plugin_vim_mkspell_when_stale
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet! g:loaded_plugin_vim_mkspell_when_stale
 endif
 
 " Deps: Requires Vim 8+ because `glob` {list} arg.
-if exists("g:loaded_plugin_vim_mkspell_when_stale") || &cp || v:version < 800
+if exists('g:loaded_plugin_vim_mkspell_when_stale') || &cp || v:version < 800
 
   finish
 endif
