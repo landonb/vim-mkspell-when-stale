@@ -25,7 +25,7 @@
 "
 "          "ap
 
-function! mkspell_when_stale#MkspellWhenStale()
+function! mkspell_when_stale#MkspellWhenStale() abort
   " echom 'mkspell_when_stale#MkspellWhenStale...'
 
   for vocab in glob('~/.vim/spell/*.add', 0, 1)
