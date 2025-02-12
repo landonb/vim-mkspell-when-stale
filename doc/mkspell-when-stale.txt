@@ -6,6 +6,7 @@ MKSPELL-WHEN-STALE COMMANDS		*mkspell-when-stale*
 
 1. About				|mkspell-when-stale-about|
 2. Commands				|mkspell-when-stale-commands|
+3. Requirements				|mkspell-when-stale-requirements|
 
 ==============================================================================
 1. About This Plugin			*mkspell-when-stale-about*
@@ -44,4 +45,14 @@ or perhaps from a script after updating the input file, e.g.,
       vim -c "call g:mkspell_when_stale#MkspellWhenStale()" -c q
     }
 <
+==============================================================================
+3. Requirements				*mkspell-when-stale-requirements*
+
+When run in Vim, this plugin requires
+Pathogen https://github.com/tpope/vim-pathogen>
+(but just for the simple `pathogen#split` command;
+you're not expected to manage this plugin with Pathogen).
+
+- For Neovim, Pathogen is not required.
+
  vim:tw=78:ts=8:ft=help:norl:

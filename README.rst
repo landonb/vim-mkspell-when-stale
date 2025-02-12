@@ -39,6 +39,16 @@ or perhaps from a script after updating the input file, e.g.,
     vim -c "call g:mkspell_when_stale#MkspellWhenStale()" -c q
   }
 
+Requirements
+============
+
+When run in Vim, this plugin requires
+`Pathogen <https://github.com/tpope/vim-pathogen>`__
+(but just for the simple ``pathogen#split`` command;
+you're not expected to manage this plugin with Pathogen).
+
+- For Neovim, Pathogen is not required.
+
 Installation
 ============
 
