@@ -28,7 +28,7 @@
 function! mkspell_when_stale#MkspellWhenStale() abort
   " echom 'mkspell_when_stale#MkspellWhenStale...'
 
-  for vocab in glob('~/.vim/spell/*.add', 0, 1)
+  for vocab in s:FindFile('spell/*.add')
     if
         \ filereadable(vocab)
         \ && (!filereadable(vocab . '.spl')
@@ -41,5 +41,32 @@ function! mkspell_when_stale#MkspellWhenStale() abort
       " echom 'Run "ap to see mkspell output'
     endif
   endfor
+endfunction
+
+function! s:FindFile(fname) abort
+  if a:fname == ''
+
+    return []
+  endif
+
+  if has('nvim')
+    let l:files = s:FindFileAnywhereOnRuntimepath_Nvim(a:fname)
+  else
+    let l:files = s:FindFileInRuntimeRoot_Vim(a:fname)
+  endif
+
+  return l:files
+endfunction
+
+function! s:FindFileAnywhereOnRuntimepath_Nvim(fname) abort
+  let l:all = 0
+
+  return nvim_get_runtime_file(a:fname, l:all)
+endfunction
+
+" Assumes spell file is under first path on &runtimepath,
+" e.g., ~/.vim/spell/
+function! s:FindFileInRuntimeRoot_Vim(fname) abort
+  return glob(pathogen#split(&rtp)[0] .. '/' .. a:fname, 0, 1)
 endfunction
 

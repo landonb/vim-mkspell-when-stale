@@ -14,13 +14,18 @@ Mkspell-When-Stale Commands
 *g:mkspell_when_stale#MkspellWhenStale()*
 
 ``g:mkspell_when_stale#MkspellWhenStale()`` feeds each ``~/.vim/spell/*.add``
-file to ``mkspell`` to generate ``.spl`` files that Vim uses to spell check.
+(or ``~/.config/nvim/spell/*.add``) file to ``mkspell`` to generate ``.spl``
+files that (Neo)Vim uses to spell check.
 
 - In the most basic example, an English user has a single input
   file, ``~/.vim/spell/en.utf-8.add``
 
   - After running the wrapper command, or after restarting Vim,
     the wrapper command generates ``~/.vim/spell/en.utf-8.add.spl``
+
+  - For Neovim, these files might be found elsewhere, e.g.,
+    ``~/.config/nvim/spell/en.utf-8.add`` and
+    ``~/.config/nvim/spell/en.utf-8.add.spl``
 
 - This command finishes immediately if the ``.spl`` file is already
   up to date (newer than the input file).
