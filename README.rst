@@ -39,6 +39,17 @@ or perhaps from a script after updating the input file, e.g.,
     vim -c "call g:mkspell_when_stale#MkspellWhenStale()" -c q
   }
 
+Related Projects
+================
+
+- ``spellfile.txt`` — *Build Vim spell file from published and private sources*
+
+  A shell script to manage spells sources and to generate the spell file.
+
+  https://github.com/DepoXy/spellfile.txt 🧙
+
+  - If you use ``spellfile.txt``, you don't also need this plugin.
+
 Requirements
 ============
 

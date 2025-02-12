@@ -6,7 +6,8 @@ MKSPELL-WHEN-STALE COMMANDS		*mkspell-when-stale*
 
 1. About				|mkspell-when-stale-about|
 2. Commands				|mkspell-when-stale-commands|
-3. Requirements				|mkspell-when-stale-requirements|
+3. Related Projects			|mkspell-when-stale-related-projects|
+4. Requirements				|mkspell-when-stale-requirements|
 
 ==============================================================================
 1. About This Plugin			*mkspell-when-stale-about*
@@ -46,7 +47,18 @@ or perhaps from a script after updating the input file, e.g.,
     }
 <
 ==============================================================================
-3. Requirements				*mkspell-when-stale-requirements*
+3. Related Projects			*mkspell-when-stale-related-projects*
+
+- `spellfile.txt` — _Build Vim spell file from published and private sources_
+
+  A shell script to manage spells sources and to generate the spell file.
+
+  https://github.com/DepoXy/spellfile.txt 🧙
+
+  - If you use `spellfile.txt`, you don't also need this plugin.
+
+==============================================================================
+4. Requirements				*mkspell-when-stale-requirements*
 
 When run in Vim, this plugin requires
 Pathogen https://github.com/tpope/vim-pathogen>
