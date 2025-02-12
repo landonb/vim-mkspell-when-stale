@@ -1,6 +1,6 @@
 *mkspell-when-stale.txt*	For Vim version ≥8.0.	Last change: 2024 Jun 05
 
-Simple Vim `mkspell` wrapper~
+Simple Vim `mkspell` wrapper 🥖 ~
 
 MKSPELL-WHEN-STALE COMMANDS		*mkspell-when-stale*
 
