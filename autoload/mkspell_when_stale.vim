@@ -29,6 +29,7 @@ function! mkspell_when_stale#MkspellWhenStale() abort
   " echom 'mkspell_when_stale#MkspellWhenStale...'
 
   for vocab in s:FindFile('spell/*.add')
+    " echom '- Found vocab file: ' .. vocab
     if
         \ filereadable(vocab)
         \ && (!filereadable(vocab . '.spl')
@@ -37,7 +38,7 @@ function! mkspell_when_stale#MkspellWhenStale() abort
       silent execute 'mkspell! ' . fnameescape(vocab)
       redir END
 
-      " echom 'Generated spell file: ' . vocab . '.spl'
+      " echom 'Generated spell file: ' .. vocab .. '.spl'
       " echom 'Run "ap to see mkspell output'
     endif
   endfor
