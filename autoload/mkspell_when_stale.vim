@@ -32,10 +32,10 @@ function! mkspell_when_stale#MkspellWhenStale() abort
     " echom '- Found vocab file: ' .. vocab
     if
         \ filereadable(vocab)
-        \ && (!filereadable(vocab . '.spl')
-        \     || getftime(vocab) > getftime(vocab . '.spl'))
+        \ && (!filereadable(vocab .. '.spl')
+        \     || getftime(vocab) > getftime(vocab .. '.spl'))
       redir @a
-      silent execute 'mkspell! ' . fnameescape(vocab)
+      silent execute 'mkspell! ' .. fnameescape(vocab)
       redir END
 
       " echom 'Generated spell file: ' .. vocab .. '.spl'
